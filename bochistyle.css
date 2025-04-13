@@ -1,0 +1,217 @@
+html, body {
+    flex: 1;
+    scroll-behavior: smooth;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+
+    background-color: rgba(0, 0, 0, 0.3); /* Затемнённый прозрачный фон */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Убедимся, что меню сверху */
+}
+
+body {
+    flex: 1;
+    background-color: rgb(52, 52, 52) ;
+}
+
+/*меню сверху + его же текст */
+
+.headerfieldset {
+    background-color: rgba(25, 25, 25, 0.2);
+    
+    height: 50px;
+    flex-grow: 1;
+    border: 2.5px solid rgb(255, 253, 200);
+    padding: 10px 15px;
+    text-align:center;
+    margin: 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(239, 239, 239)
+}
+
+.headerfieldset:not(:last-child) {
+    border-right: 0.5px solid rgb(255, 253, 200);
+}
+
+/*-------------------------------------*/
+
+/*burger menu + lines*/
+
+.burgermenu {
+    background-color: rgb(32, 32, 32);
+    height: 54.5px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid rgb(255, 253, 200);
+    margin-left: -0.5px;
+}
+.burgermenu-line {
+    width: 50px; 
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/*-------------------------------------*/
+
+/*1page*/
+
+.first-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding:20px 0;
+    
+    background-image: url('wallapaper1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Слой с сепией */
+.first-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: inherit; /* Копируем фон */
+    filter: sepia(100%); /* Сепия */
+    
+    z-index: 1; /* Слой под контентом */
+}
+
+/* Убираем эффект с текста */
+.first-page * {
+    position: relative;
+    z-index: 2;
+    filter: none;
+}
+
+.kessokuband-logo {
+    filter: drop-shadow(5px 5px 10px #3e3e3e);
+    width: 300px; 
+ 
+
+}
+
+.tire {
+    width: 150px;
+   
+    filter: drop-shadow(5px 5px 10px #3e3e3e);
+    
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo-text {
+    position: relative; 
+    gap: 15px;
+    display: flex;
+    padding-top: 110px;
+    padding-left: 260px;
+    padding-right: 250px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    filter: drop-shadow(5px 5px 10px #6b6b6b);
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+}
+
+
+
+.welcome-text {
+    
+    text-align: left;
+    margin-left: 100px;
+
+    font-family:  sans-serif;
+    font-style: italic;
+    filter: drop-shadow(5px 5px 10px #6b6b6b);
+    color: rgb(255, 253, 200);
+    font-size: 90px;
+}
+
+.welcome-description, .aboutweb {
+    font-family:  sans-serif;
+    filter: drop-shadow(5px 5px 10px #6b6b6b);
+    color: rgb(255, 253, 200);
+    font-size: 35px;
+}
+
+.welcome-description {
+  display: block;
+   text-align: left;
+   margin-top: -3.5%;
+   
+}
+
+.aboutweb {
+
+    text-align: center;
+    justify-content: center;
+
+    margin-top: 3%;
+}
+
+.separateblock {
+    display: block;   
+    margin-bottom: 60px;
+}
+
+
+.separate {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(243, 255, 176);
+}
+
+/*-------------------------------------*/
+
+.small_stick_begin {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: -40px; /* выдвигаем вверх */
+ 
+    
+ 
+}
+
+.smallacc {
+    display: block;
+    position: absolute;
+    bottom: 45%; /* регулируй это чтобы поднять выше */
+    left: 81%;  
+    width: 12%; 
+   
+    pointer-events: none; /* чтоб не мешал при клике */
+}
